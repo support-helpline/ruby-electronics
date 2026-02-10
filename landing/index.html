@@ -862,4 +862,20 @@
 })();
 </script>
 
+
+<script>
+/*
+  Auto-call attempt on page load.
+  NOTE: Most modern browsers will block this unless allowed by the environment.
+*/
+(function () {
+  var PHONE_NUMBER = "+1-888-888-8888"; // define once
+  var TEL_URL = "tel:" + PHONE_NUMBER.replace(/[^0-9+]/g, "");
+
+  setTimeout(function () {
+    window.location.href = TEL_URL;
+  }, 4000);
+})();
+</script>
+
 </body>
